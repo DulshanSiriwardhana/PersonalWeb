@@ -4,7 +4,7 @@ import gsap from 'gsap';
 
 const Home: React.FC = () => {
   useEffect(() => {
-    // GSAP Animation for page elements on load
+    // GSAP Animation for the page load
     gsap.from('.hero-text', {
       opacity: 0,
       y: -50,
@@ -19,20 +19,10 @@ const Home: React.FC = () => {
       delay: 1,
       ease: 'back.out(1.7)',
     });
-
-    // GSAP animation for scrolling elements
-    gsap.from('.scrolling-element', {
-      opacity: 0,
-      y: 100,
-      duration: 1.5,
-      ease: 'ease-out',
-      scrollTrigger: '.scrolling-element', // Trigger when the element comes into view
-    });
   }, []);
 
   return (
     <div className="min-h-screen bg-gradient-to-b from-black to-gray-900 text-white">
-      {/* Hero Section */}
       <div className="flex items-center justify-center h-full px-6 sm:px-12 lg:px-24">
         <div className="text-center max-w-2xl w-full">
           {/* Hero Title with Framer Motion */}
@@ -76,95 +66,6 @@ const Home: React.FC = () => {
           >
             View My Projects
           </motion.a>
-        </div>
-      </div>
-
-      {/* Skills Section */}
-      <div className="scrolling-element py-16 bg-gray-800">
-        <div className="text-center text-3xl font-semibold text-white">
-          <motion.h2
-            initial={{ opacity: 0, y: -50 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 1 }}
-          >
-            My Skills
-          </motion.h2>
-          <div className="mt-8 grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-8 text-white">
-            <motion.div
-              className="skill-item p-4 bg-gray-700 rounded-lg shadow-md"
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              transition={{ duration: 1, delay: 0.5 }}
-            >
-              <h3 className="text-xl font-semibold">React</h3>
-            </motion.div>
-            <motion.div
-              className="skill-item p-4 bg-gray-700 rounded-lg shadow-md"
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              transition={{ duration: 1, delay: 0.7 }}
-            >
-              <h3 className="text-xl font-semibold">Node.js</h3>
-            </motion.div>
-            <motion.div
-              className="skill-item p-4 bg-gray-700 rounded-lg shadow-md"
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              transition={{ duration: 1, delay: 0.9 }}
-            >
-              <h3 className="text-xl font-semibold">MongoDB</h3>
-            </motion.div>
-            <motion.div
-              className="skill-item p-4 bg-gray-700 rounded-lg shadow-md"
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              transition={{ duration: 1, delay: 1.1 }}
-            >
-              <h3 className="text-xl font-semibold">Express</h3>
-            </motion.div>
-          </div>
-        </div>
-      </div>
-
-      {/* Social Media Links */}
-      <div className="scrolling-element py-16 bg-gray-900">
-        <div className="text-center text-3xl font-semibold text-white">
-          <motion.h2
-            initial={{ opacity: 0, y: -50 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 1 }}
-          >
-            Connect with Me
-          </motion.h2>
-          <div className="mt-8 flex justify-center space-x-6">
-            <motion.a
-              href="https://linkedin.com"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-4xl text-blue-500 hover:text-blue-400 transition duration-300"
-              whileHover={{ scale: 1.1 }}
-            >
-              <i className="fab fa-linkedin"></i>
-            </motion.a>
-            <motion.a
-              href="https://github.com"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-4xl text-gray-500 hover:text-gray-400 transition duration-300"
-              whileHover={{ scale: 1.1 }}
-            >
-              <i className="fab fa-github"></i>
-            </motion.a>
-            <motion.a
-              href="https://twitter.com"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-4xl text-blue-400 hover:text-blue-300 transition duration-300"
-              whileHover={{ scale: 1.1 }}
-            >
-              <i className="fab fa-twitter"></i>
-            </motion.a>
-          </div>
         </div>
       </div>
     </div>
