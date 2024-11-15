@@ -1,3 +1,40 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@font-face {
+    font-family: "PT Serif Regular";
+    font-style: normal;
+    font-weight: 400;
+    src: local("PT Serif Regular"),
+      url("../src/assets/fonts/PT_Serif/PTSerif-Regular.ttf")
+        format("truetype");
+  }
+
+@font-face {
+    font-family: "PT Serif Bold";
+    font-style: normal;
+    font-weight: 700;
+    src: local("PT Serif Bold"),
+      url("../src/assets/fonts/PT_Serif/PTSerif-Bold.ttf")
+        format("truetype");
+  }
+
+@font-face {
+    font-family: "PT Serif Regular Italic";
+    font-style: normal;
+    font-weight: 700;
+    src: local("PT Serif Regular Italic"),
+      url("../src/assets/fonts/PT_Serif/PTSerif-RegularItalic.ttf")
+        format("truetype");
+  }
+
+
+@font-face {
+    font-family: "PT Serif Bold Italic";
+    font-style: normal;
+    font-weight: 700;
+    src: local("PT Serif Bold Italic"),
+      url("../src/assets/fonts/PT_Serif/PTSerif-BoldItalic.ttf")
+        format("truetype");
+  }
